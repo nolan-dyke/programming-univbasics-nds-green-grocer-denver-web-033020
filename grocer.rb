@@ -93,5 +93,8 @@ def checkout(cart, coupons)
     grand_total += (clearanced_cart[counter][:price] * clearanced_cart[counter][:count])
     counter += 1 
   end 
+  if grand_total > 100
+    grand_total -= 0.1 * grand_total
+  end 
   grand_total
 end
